@@ -2,8 +2,8 @@
 
 /* function to write */
 /**
- * handle_write_char - function to prints a string
- * @c: char types.
+ * handle_write_char - A function to prints a string
+ * @c: char type.
  * @buffer: array buffer to handle print
  * @flags:  tracks number of active flags.
  * @width: gets width.
@@ -85,7 +85,7 @@ int write_number(int is_negative, int ind, char buffer[],
 /**
  * write_num - function to write a number using a bufffer
  * @ind: the index at which the number starts on the buffer
- * @buffer: buffer
+ * @buffer: A buffer
  * @flags: flags
  * @width: width
  * @prec: precision specifier
