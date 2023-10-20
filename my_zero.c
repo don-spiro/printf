@@ -1,27 +1,27 @@
 #include "main.h"
 
 /**
- * _printf - function that emulates printf function in c
- * @format: format pointer.
+ * _printf - A function that emulates printf function in c
+ * @format:A format pointer.
  * Return: prints characters to the standard output.
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, output_len = 0;
-	int flags, width, precision, size, buff_ind = 0, printed = 0;
-	va_list arguments;
-	char buffer[BUFF_SIZE];
+int i = 0, output_len = 0;
+int flags, width, precision, size, buff_ind = 0, printed = 0;
+va_list arguments;
+char buffer[BUFF_SIZE];
 
-	if (format == 0)
-		return (-1);
-	va_start(arguments, format);
+if (format == 0)
+return (-1);
+va_start(arguments, format);
 
-	while (format && format[i] != '\0')
-	{
-		if (format[i] != '%')
-		{
-			buffer[buff_ind++] = format[i];
-			if (buff_ind == BUFF_SIZE)
+while (format && format[i] != '\0')
+{
+if (format[i] != '%')
+{
+buffer[buff_ind++] = format[i];
+if (buff_ind == BUFF_SIZE)
 				print_buffer(buffer, &buff_ind);
 			/* write(1, &format[i], 1);*/
 			output_len++;
